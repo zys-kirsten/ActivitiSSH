@@ -4,6 +4,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
         <property name="java-output-path" value="/ActivitiSSH/build/classes"/>
-        <property name="context-root" value="ActivitiSSH"/>
+        <property name="context-root" value="ASSH"/>
     </wb-module>
 </project-modules>
