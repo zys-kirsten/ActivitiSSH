@@ -55,7 +55,8 @@
     			<param name="actionName">workflowAction_listTask.action</param>
             </result>
         	<result name="viewTaskForm" type="redirectAction">
-        		<param name="actionName">/workflowAction_audit.action</param>
+        	<!-- 从LeaveBill.bpmn文件中获取任务节点的url连接 -->
+        		<param name="actionName">/${#url}</param>
         	</result>
         	<result name="taskForm">WEB-INF/views/workflow/taskForm.jsp</result>
             <result name="viewHisComment">WEB-INF/views/workflow/taskFormHis.jsp</result>

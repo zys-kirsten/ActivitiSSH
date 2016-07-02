@@ -30,13 +30,11 @@ public class LoginAction extends ActionSupport implements ModelDriven<Employee> 
 	 */
 	public String login(){
 		//1.获取用户名
-		String name = employee.getName();
-		
+		String name = employee.getName();	
 		//2.使用用户名作为查询条件进行查询员工表，获取当前用户对应的信息
 		Employee emp = employeeService.findEmployeeByName(name);
 		//3.将查询的对象放到session中
-		
-		SessionContext.setUser(employee);
+		SessionContext.setUser(emp);
 		return "success";
 	}
 	

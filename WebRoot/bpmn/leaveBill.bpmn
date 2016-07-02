@@ -16,17 +16,11 @@
         <activiti:taskListener event="create" class="ssh.utils.ManagerTaskHandler"></activiti:taskListener>
       </extensionElements>
     </userTask>
-    <sequenceFlow id="flow5" name="批准" sourceRef="usertask2" targetRef="usertask3">
+    <sequenceFlow id="flow5" sourceRef="usertask2" targetRef="usertask3">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${outcome=='批准'}]]></conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="flow6" name="批准" sourceRef="usertask3" targetRef="endevent1">
+    <sequenceFlow id="flow6" sourceRef="usertask3" targetRef="endevent1">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${outcome=='批准'}]]></conditionExpression>
-    </sequenceFlow>
-    <sequenceFlow id="flow7" name="驳回" sourceRef="usertask2" targetRef="usertask1">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${outcome=='驳回'}]]></conditionExpression>
-    </sequenceFlow>
-    <sequenceFlow id="flow8" name="驳回" sourceRef="usertask3" targetRef="usertask1">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${outcome=='驳回'}]]></conditionExpression>
     </sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_LeaveBill">
@@ -57,36 +51,10 @@
       <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
         <omgdi:waypoint x="585.0" y="277.0"></omgdi:waypoint>
         <omgdi:waypoint x="650.0" y="277.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="585.0" y="277.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
         <omgdi:waypoint x="755.0" y="277.0"></omgdi:waypoint>
         <omgdi:waypoint x="870.0" y="277.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="24.0" x="755.0" y="277.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
-        <omgdi:waypoint x="532.0" y="305.0"></omgdi:waypoint>
-        <omgdi:waypoint x="532.0" y="357.0"></omgdi:waypoint>
-        <omgdi:waypoint x="432.0" y="357.0"></omgdi:waypoint>
-        <omgdi:waypoint x="332.0" y="357.0"></omgdi:waypoint>
-        <omgdi:waypoint x="332.0" y="305.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="24.0" x="400.0" y="339.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
-        <omgdi:waypoint x="702.0" y="250.0"></omgdi:waypoint>
-        <omgdi:waypoint x="702.0" y="201.0"></omgdi:waypoint>
-        <omgdi:waypoint x="532.0" y="200.0"></omgdi:waypoint>
-        <omgdi:waypoint x="332.0" y="200.0"></omgdi:waypoint>
-        <omgdi:waypoint x="332.0" y="250.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="24.0" x="480.0" y="181.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

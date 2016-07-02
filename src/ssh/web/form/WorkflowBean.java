@@ -63,6 +63,12 @@ public class WorkflowBean {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+	@Override
+	public String toString() {
+		return "WorkflowBean [file=" + file + ", filename=" + filename + ", id=" + id + ", deploymentId=" + deploymentId
+				+ ", imageName=" + imageName + ", taskId=" + taskId + ", outcome=" + outcome + ", comment=" + comment
+				+ "]";
+	}
 	
 	
 }

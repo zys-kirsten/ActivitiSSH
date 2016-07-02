@@ -70,6 +70,12 @@ public class LeaveBill {
 	public void setState(Integer state) {
 		this.state = state;
 	}
+
+	@Override
+	public String toString() {
+		return "LeaveBill [id=" + id + ", days=" + days + ", content=" + content + ", leaveDate=" + leaveDate
+				+ ", remark=" + remark + ", user=" + user + ", state=" + state + "]";
+	}
 	
 	
 }
